@@ -1,0 +1,50 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+body{
+	margin: 0;
+	color: #212121;	
+	background:#6f9436;
+}
+.main{
+	width:567px;
+	height: 628px;
+	background: white;
+	margin: 100px auto;
+	box-shadow: 1px 2px 4px;
+}
+.header{
+	font-size: 38px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 128px;
+	font-family: 'Arial Rounded MT Bold';
+}
+.todolist{
+	height:280px;
+}
+.todolist .container{
+	height: 240px;
+	overflow: auto;
+	margin: 20px 120px;
+	border:1px solid green;
+}
+.todolist li{
+	font-size: 24px;
+	line-height: 54px;	
+}
+.form{
+	height: 110px;
+}
+.action{
+	height: 110px;
+}
