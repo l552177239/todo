@@ -7,7 +7,7 @@ class Todolist extends React.Component{
 				<div className='container'>
 					<ul>
 						<li>123</li>
-						<li>123</li>
+						<li className='completed'>123</li>
 						<li>123</li>
 						<li>123</li>
 					</ul>

@@ -33,14 +33,32 @@ body{
 	height:280px;
 }
 .todolist .container{
-	height: 240px;
+	height: 226px;
 	overflow: auto;
 	margin: 20px 120px;
 	border:1px solid green;
 }
 .todolist li{
 	font-size: 24px;
-	line-height: 54px;	
+	line-height: 54px;
+	border: 1px solid red;	
+}
+.todolist li.completed{
+	color: #989191;
+	text-decoration: line-through;
+	position: relative;
+}
+.todolist li.completed:after{
+	content: '';
+	width: 20px;
+	height: 20px;
+	display: block;
+
+	background-image:url('/img/right.svg');
+	background-size: cover;
+	position: absolute;
+	right: 0;
+	top:15px;
 }
 .form{
 	height: 110px;
