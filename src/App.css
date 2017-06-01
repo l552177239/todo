@@ -49,6 +49,7 @@ body{
 	position: relative;
 }
 .todolist li.completed:after{
+	/*与 :before 及 :after 伪元素配合使用，来插入生成''中内容*/
 	content: '';
 	width: 20px;
 	height: 20px;
@@ -62,7 +63,52 @@ body{
 }
 .form{
 	height: 110px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+.form input[type=text]{
+	border:0;
+	width: 60%;
+	height: 30px;
+	padding:0 5px;
+	outline: none;
+	color: #484848;
+	background-color: #DDD;
+}
+.form input[type=submit]{
+	border: 0;
+	width: 50px;
+	height: 50px;
+	color: white;
+	font-size: 40px;
+	border-radius: 50%;
+	background: #8ED620;
+	position: absolute;
+	left:420px;
+	top:-10px;
+}
+.form input[type=button]{
+	width: 50px;
+	height: 50px;
 }
 .action{
 	height: 110px;
+	margin: 0 auto;
+}
+.action .all{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-left: 200px;
+	background-image: url('/img/all.svg');
+	background-size: cover;
+}
+.action .right{
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin-left: 100px;
+	background-image: url('/img/right.svg');
+	background-size: cover;
 }

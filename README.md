@@ -177,3 +177,64 @@ body{
 	height: 110px;
 }
 ```
+##### 第三步 #####
+
+将假数据用redux和react-redux导入Todolist
+
+	安包：npm i redux --save
+		npm i react-redux --save
+
+	src文件夹创建redux文件夹创建store.js文件
+
+```
+import { createStore } from 'redux'
+import rootReducer from './reducers'
+
+
+const store = createStore(rootReducer)
+export default store
+```
+reducers /index.js
+
+创建一个reducer函数
+
+数据
+let todos =	[
+	'123',
+	'123'
+]
+拿数据：let state = store.getState()
+
+```
+import { connect } from 'react-redux'
+import store from './store'
+//导入数据
+
+const mapStateToProps = (state) => (
+//state为状态树
+  {
+    todos:state.todos
+  }
+)
+export default connect(mapStateToProps)(Todolist)
+//映射出
+```
+```
+import React from 'react'
+import Main from './Main'
+import store from './redux/store'
+import { Provider } from 'react-redux'
+
+
+class App extends React.Component{
+	render(){
+		return(
+			<Provider store={state}>
+			//给所有组件传入store
+				<Main />
+			</Provider>
+			)
+	}
+}
+export default App
+```
